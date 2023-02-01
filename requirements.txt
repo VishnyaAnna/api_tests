@@ -1,0 +1,4 @@
+requests==2.28.2
+pytest==7.2.1
+voluptuous==0.13.1
+pytest-voluptuous== 1.2.0
