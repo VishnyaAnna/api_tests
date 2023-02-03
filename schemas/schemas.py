@@ -1,38 +1,40 @@
 from voluptuous import Schema
 
-create_user = Schema(
-    {
-        'name': str,
-        'job': str,
-        'id': str,
-        'createdAt': str
-    },
-)
+base_url = "https://reqres.in/"
 
-update_user = Schema(
+create_single_user = Schema(
     {
-        'name': str,
-        'job': str,
-        'updatedAt': str
+        "name": str,
+        "job": str,
+        "id": str,
+        "createdAt": str
     }
 )
 
-register_user = Schema(
+register_single_user = Schema(
     {
-        'id': int,
-        'token': str
+        "id": int,
+        "token": str
+    }
+
+)
+
+update_single_user = Schema(
+    {
+        "name": str,
+        "job": str,
+        "updatedAt": str
     }
 )
 
-
-login_user = Schema(
+login_single_user_successful = Schema(
     {
-        'token': str
+        "token": str
     }
 )
 
-unsuccessful_login_user = Schema(
+login_single_user_unsuccessful = Schema(
     {
-        'error': str
+        "error": str
     }
 )
