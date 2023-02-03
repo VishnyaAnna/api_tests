@@ -83,7 +83,7 @@ def test_register_user():
     )
 
     # THEN:
-    assert result.status_code == 200
+    assert result.status_code == 400
     assert result.json() == S(schemas.register_user)
 
     assert len(result.json()['token']) == 17
@@ -105,7 +105,7 @@ def test_login_user():
         }
     )
     # THEN:
-    assert result.status_code == 200
+    assert result.status_code == 400
     assert result.json() == S(schemas.login_user)
 
     assert len(result.json()['token']) == 17
